@@ -1,0 +1,15 @@
+.footer{
+    position: relative;
+    background: url('../../assets/images/Meteor.svg');
+    box-shadow: 0 0 50px 50px #022c43 inset;
+    background-repeat: no-repeat;
+    h1{
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        left: 40%;
+        color: white;
+        text-align: center;
+        font-size: 40px;
+    }
+}

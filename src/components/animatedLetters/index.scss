@@ -1,0 +1,19 @@
+span{
+    font-size: 53px;
+}
+@for $i from 1 through 35{
+    .letter-animate._#{$i}{
+        animation-duration: #{$i*.5s};
+        animation-name: fadeIn;
+    }
+}
+.letter-animate.hover{
+
+    &:hover{
+        color: #92ccdd;
+        cursor:grab;
+        animation: rubberBand 1s;
+    }
+
+    
+}

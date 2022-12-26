@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Footer from './components/footer';
+import Header from './components/header';
+import Logos from './components/logos';
+import { useEffect,useRef } from 'react';
+import { usePageContext } from './context';
 function App() {
+  const {logo1ref} = usePageContext()
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      console.log(entry);
+    },{
+  root: null,
+  rootMargin: '0px',
+  threshold: 1.0
+});
+    observer.observe(logo1ref.current);
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='main-page'>
+        <Header/>
+        <Logos/>
+        <Footer/>
     </div>
   );
 }
