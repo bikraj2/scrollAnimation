@@ -3,16 +3,15 @@ span{
 }
 @for $i from 1 through 35{
     .letter-animate._#{$i}{
-        animation-duration: #{$i*.5s};
+        animation-duration: #{$i*.25s};
         animation-name: fadeIn;
     }
 }
-.letter-animate.hover{
-
+.letter-animate-hover{
     &:hover{
-        color: #92ccdd;
-        cursor:grab;
-        animation: rubberBand 1s;
+        color: black;
+        animation-name: fadeOut;
+        animation-duration: 4s;
     }
 
     

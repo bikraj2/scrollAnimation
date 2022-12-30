@@ -6,7 +6,7 @@ function Header() {
   const [classname,setClassName]  = useState('letter-animate')
   const info = "This a cool animation."
   useEffect(() => {
-    return setTimeout(()=>setClassName('letter-animate hover'),4000)
+    return setTimeout(()=>setClassName('letter-animate-hover'),4000)
   }, []);
   return (
     <div className='container header'>

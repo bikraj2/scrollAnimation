@@ -1,14 +1,14 @@
-import { useContext ,useEffect,useRef} from "react";
+import { useContext ,useEffect,useState,useRef} from "react";
 import React from "react";
 export const pageContext = React.createContext()
+
 export const PageProvider = ({children})=>{
      const logo1ref = useRef();
-     const logo2ref = useRef();
-     const logo3ref = useRef();
-     
+     const [className, setclassName] = useState("");
     return <pageContext.Provider
     value={{
-        logo1ref
+        logo1ref,
+        className,setclassName
     }}
     >
         {children}
