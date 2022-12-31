@@ -12,17 +12,17 @@ function Logos() {
       <img
         src={logo1}
         alt='cycle'
-        className={`animate_1 ${className == '' ? '' : className} `}
+        className={`animate _1 ${className == '' ? '' : className} `}
       />
       <img
         src={logo2}
         alt='shape'
-        className={`animate_2 ${className == '' ? '' : className} `}
+        className={`animate _2 ${className == '' ? '' : className} `}
       />
       <img
         src={logo3}
         alt='globe'
-        className={`animate_3 ${className == '' ? '' : className}`}
+        className={`animate _3 ${className == '' ? '' : className}`}
       />
     </div>
   );

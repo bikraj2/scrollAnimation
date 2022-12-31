@@ -2,14 +2,18 @@
     display: flex;
     justify-content: center;
     img{
-        opacity: 0;
         display: inline;
         width: 20%;
-        transition: all 5s;
-
+       opacity: 0;
     }
     .show{
         opacity: 1;
+        animation: fadeInLeft 1s ;
+    }
+    @for $i from 1 through 35{
+    .animate._#{$i}{
+        animation-delay: #{$i/9}s;
+    }
     }
     }
    
